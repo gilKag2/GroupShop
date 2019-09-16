@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">GroupShop</string>
+    <string name="dairy">Dairy</string>
+    <string name="meat">Meat</string>
+    <string name="drinks">Drinks</string>
+    <string name="milk">Milk</string>
+    <string name="cookies">Cookies</string>
+    <string name="eggs">Eggs</string>
+    <string name="cola">Coca Cola</string>
+    <string name="sprite">Sprite</string>
+
+    <string-array name="Categories">
+        <item>@string/dairy</item>
+        <item>@string/meat</item>
+        <item>@string/drinks</item>
+    </string-array>
+
+    <string-array name="products">
+        <item>@string/milk</item>
+        <item>@string/cookies</item>
+        <item >@string/eggs</item>
+    </string-array>
+</resources>
