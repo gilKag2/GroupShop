@@ -10,6 +10,10 @@ public class Product {
         this.item = item;
     }
 
+    public Product(String item) {
+        this.item = item;
+    }
+
     public int getImgResource() {
         return mImgResource;
     }

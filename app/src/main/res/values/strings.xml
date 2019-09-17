@@ -9,6 +9,13 @@
     <string name="cola">Coca Cola</string>
     <string name="sprite">Sprite</string>
 
+    <string name="search">Search</string>
+    <string name="remove">Remove Item</string>
+    <string name="add">Add Item</string>
+
+    <string name="ok">Ok</string>
+    <string name="cancel">Cancel</string>
+
     <string-array name="Categories">
         <item>@string/dairy</item>
         <item>@string/meat</item>

@@ -9,4 +9,9 @@
     <string name="drinks">משקאות</string>
     <string name="cola">קולה</string>
     <string name="sprite">ספרייט</string>
+    <string name="remove">הסר מוצר</string>
+    <string name="search">חפש מוצר</string>
+    <string name="add">הוסף מוצר</string>
+    <string name="cancel">בטל</string>
+    <string name="ok">אשר</string>
 </resources>
