@@ -1,6 +1,8 @@
 package gilKag.groupshop;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.res.Resources;
 import android.graphics.Color;
@@ -14,28 +16,40 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+import java.util.ArrayList;
 
+public class MainActivity extends AppCompatActivity {
+    private RecyclerView mRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
     private FoodBox mFoodBox;
-    private ProductsAdapter mAdapter;
-    private LinearLayout mProductLayout;
+//    private ProductsAdapter mAdapter;
+//    private LinearLayout mProductLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ArrayList<Product> example = new ArrayList<>();
+        example.add(new Product(R.drawable.cocacola_img, getString(R.string.cola)));
+        example.add(new Product(R.drawable.milk, getString(R.string.milk)));
+        mRecyclerView = (RecyclerView) findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mAdapter = new ProductsAdapter(example);
 
-        
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setAdapter(mAdapter);
         // TextView text = (TextView) findViewById(R.id.text);
 
-        mFoodBox = new FoodBox(getResources().getStringArray(R.array.products));
+       /* mFoodBox = new FoodBox(getResources().getStringArray(R.array.products));
         // mFoodBox.addItem("AXE");
 
         mProductLayout = (LinearLayout) findViewById(R.id.products_layout);
 
         for (String product : FoodBox.getItems()) {
             addProductButton(product);
-        }
+        }*/
     }
 
     private void addProductButton(String product) {
@@ -62,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 }.start();
             }
         });
-        mProductLayout.addView(btn);
+        //mProductLayout.addView(btn);
     }
 
 }

@@ -4,30 +4,26 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class FoodBox {
-    private static ArrayList<String> mItems;
+    private static ArrayList<Product> mProducts;
 
-    public FoodBox(ArrayList<String> items) {
-        mItems = items;
+
+    FoodBox(ArrayList<Product> products) {
+        mProducts = products;
     }
 
-    public FoodBox(String[] items) {
-        mItems = new ArrayList<String>(Arrays.asList(items));
+    public static ArrayList<Product> getProducts() {
+        return mProducts;
     }
 
-    public FoodBox() {
-        mItems = new ArrayList<>();
+    public static void setProducts(ArrayList<Product> mProducts) {
+        FoodBox.mProducts = mProducts;
     }
 
-    public void addItem(String item){
-        mItems.add(item);
+    public static void removeProduct(Product product){
+        mProducts.remove(product);
     }
 
-    public void removeItem(String item) {
-        mItems.remove(item);
+    public static void addProduct(Product product) {
+        mProducts.add(product);
     }
-
-    public static ArrayList<String> getItems() {
-        return mItems;
-    }
-
 }
